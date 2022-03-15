@@ -50,7 +50,7 @@
     {% endblock head %}
   </head>
 
-  <body>
+  <body class="flex flex-col min-h-screen">
     <nav class="bg-gray-100">
       <div class="max-w-full mx-auto px-8 lg:px-16">
         <div class="flex justify-between">
@@ -90,14 +90,30 @@
       </div>
     </nav>
 
-    <main class="flex flex-col items-center justify-center">
-      <div class="w-5/6 lg:max-w-screen-lg">
-        {% block body %}
-        {% endblock body %}
+    <main class="flex-grow">
+      <div class="flex flex-col items-center justify-center">
+        <div class="w-5/6 lg:max-w-screen-lg">
+          {% block body %}
+          {% endblock body %}
+        </div>
       </div>
     </main>
 
     {# footer #}
+    <footer class="bg-gray-50">
+      <div class="max-w-full mx-auto px-8 lg:px-16">
+        <div class="flex justify-between">
+          {# Left #}
+          <div class="p-3 text-gray-700 font-sans text-sm">&copy; Karate Wado im Hochschulsport der Universität Münster</div>
+
+          {# Right #}
+          <div class="flex space-x-2">
+          <a href="/impressum" class="p-3 text-gray-700 hover:text-gay-900 hover:bg-gray-100 text-base rounded-xl">Impressum</a>
+          <a href="/kontakt" class="p-3 text-gray-700 hover:text-gay-900 hover:bg-gray-100 text-base rounded-xl">Kontakt</a>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <script src="/js/navbar.js"></script>
   </body>
