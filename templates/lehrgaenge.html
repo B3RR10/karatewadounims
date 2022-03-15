@@ -23,7 +23,7 @@
         <li><b>Termin:</b> {{ event.date | date(format="%d.%m.%Y") }}</li>
         <li><b>Uhrzeit:</b> {{ event.time }}</li>
         <li><b>Trainer:</b> {{ event.trainer }}</li>
-        <li><b>Ort:</b> <a href="{{ event.place_link }}">{{ event.place_name }}</a></li>
+        <li><b>Ort:</b> <a href="{{ event.place_link }} class="text-sm text-gray-700 underline decoration-slate-800"">{{ event.place_name }}</a></li>
       </ul>
       <div class="mt-4 text-sm text-gray-900">{{ event.note }}</div>
 
@@ -42,7 +42,7 @@
   {% endif %}
 </div>
 
-<div class="markdown py-3 px-8 my-8">
+<div class="markdown py-3 my-8">
   {{ section.content | safe }}
 </div>
 

@@ -10,9 +10,11 @@
     {{ section.extra.semester }}
   </div>
 
+  {% if section.extra.training %}
+
   <div class="md:flex block md:justify-start md:px-8 md:space-x-16">
   {% for training in section.extra.training %}
-    <div class="flex flex-col items-center space-y-2 mt-4 py-4 px-8 text-center bg-gray-100 space-y-4 rounded-lg">
+    <div class="flex flex-col items-center space-y-2 mt-4 py-4 px-8 text-center bg-gray-100 space-y-4 rounded-lg min-w-[25%]">
       <div class="text-xl font-bold mb-2">{{ training.day | upper }}</div>
       <div class="font-bold">{{ training.time }}</div>
       <a href="{{ training.place_link }}" class="text-sm text-gray-700 underline decoration-slate-800">{{ training.place_name }}</a>
@@ -22,9 +24,19 @@
     </div>
   {% endfor %}
   </div>
+
+  {% else %}
+
+  <div class="mt-12 bg-gray-100 rounded-lg">
+    <div class="p-8 text-justify leading-snug align-baseline">
+      Neue Termine sind bald für Sie online.
+    </div>
+  </div>
+  {% endif %}
+
 </div>
 
-<div class="markdown py-3 px-8 my-8">
+<div class="markdown py-3 my-8">
   {{ section.content | safe }}
 </div>
 

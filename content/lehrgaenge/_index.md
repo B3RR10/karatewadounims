@@ -16,7 +16,7 @@ template = "lehrgaenge.html"
 #note = ""
 +++
 
-### Weitere Informationen finden Sie here:
+## Weitere Informationen finden Sie here:
 
 * [Wado-Lehrgänge](https://www.wado-karate.de)
 * [NRW-Landeslehrgänge](https://www.kdnw.de)

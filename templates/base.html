@@ -39,8 +39,6 @@
     <meta property="og:description" content="{{ meta_description }}" />
     {# <meta property="og:image" content="{{get_url(path=img_path,cachebust=true)}}" /> #}
 
-    <link rel="alternate" type="application/rss+xml" title="RSS feed" href="{{ config.base_url | safe }}/rss.xml" />
-
     <!-- Stylesheets -->
     <link href="{{get_url(path='css/main.css',cachebust=true)}}" rel="stylesheet" type="text/css" />
 
@@ -54,7 +52,7 @@
         <div class="flex justify-between">
           {# Items #}
           <a href="/" class="flex items-center space-x-4 py-3 px-3 text-gray-700 hover:text-gray-900">
-            Image Logo
+            <img src="/img/wado_ryu_icon.png" alt="Wado Ryu Icon" class="w-16">
             <span class="font-sans text-lg font-bold">Karate Wado<br/>Uni Münster</span>
           </a>
 
