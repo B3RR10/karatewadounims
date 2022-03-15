@@ -1,9 +1,9 @@
 +++
-title = "Uwe Landwehr"
+title = "Uwe Lanwehr"
 weight = 1
 [extra]
 level = "3. Dan"
-img = "/img/trainer/uwe_landwehr.jpg"
+img = "/img/trainer/uwe_lanwehr.jpg"
 +++
 
 hat 1992 mit dem Karate-Training in Lüneburg bei Heinrich Reimer (6. Dan) begonnen. 1996 gewann er die Lüneburger
