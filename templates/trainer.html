@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+{# Content of the _index.md file #}
+<h2 class="text-2xl mt-12 py-3 px-8 font-extrabold">{{ section.title }}</h2>
+
+{% for page in section.pages %}
+<div class="flex items-center bg-gray-100 mt-12 rounded-lg">
+  {# Image class="h-auto w-60 rounded-lg object-cover"#}
+  <img src="{{ page.extra.img }}" alt="" class="rounded-lg object-cover h-auto w-60">
+
+  <div class="flex flex-col w-full bg-gray-100 py-3 px-8 rounded-lg">
+
+    {# Header #}
+    <div class="flex justify-between items-center px-8">
+      <div class="text-xl">
+        <b>{{ page.title }}</b> - {{ page.extra.level }}
+      </div>
+    </div>
+
+    {# Content #}
+    <div class="p-8 text-sm text-justify leading-snug text-gray-900 align-baseline">
+      {{ page.content | safe }}
+    </div>
+  </div>
+</div>
+{% endfor %}
+
+{% endblock body %}

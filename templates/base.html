@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="{% if lang %}{{ lang }}{% else %}{{ config.default_language }}{% endif %}">
+
+  <head>
+    {# {% set img_path = "imgs/og_img.png" %} #}
+
+    {% set meta_author = config.extra.author %}
+
+    {% if page %}
+    {% set meta_title = page.title ~ ' - ' ~ config.title %}
+    {% set meta_description = page.description %}
+    {% if page.extra.static_image_path %}
+    {% set img_path = page.extra.static_image_path %}
+    {% endif %}
+    {% else %}
+    {% set meta_title = config.title %}
+    {% set meta_description = config.description %}
+    {% endif %}
+
+    <title>{{ meta_title }}</title>
+
+    <!-- Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="title" content="{{ meta_title }}" />
+    <meta name="description" content="{{ meta_description }}" />
+
+    <!-- Favicon -->
+    {# <link rel="icon" type="image/png" sizes="16x16" href="{{get_url(path='favicons/favicon-16x16.png', cachebust=true)}}"> #}
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+      <!-- Open Graph Protocol -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ current_url }}" />
+    <meta property="og:title" content="{{ meta_title }}" />
+    <meta property="og:description" content="{{ meta_description }}" />
+    {# <meta property="og:image" content="{{get_url(path=img_path,cachebust=true)}}" /> #}
+
+    <link rel="alternate" type="application/rss+xml" title="RSS feed" href="{{ config.base_url | safe }}/rss.xml" />
+
+    <!-- Stylesheets -->
+    <link href="{{get_url(path='css/main.css',cachebust=true)}}" rel="stylesheet" type="text/css" />
+
+    {% block head %}
+    {% endblock head %}
+  </head>
+
+  <body>
+    <nav class="bg-gray-100">
+      <div class="max-w-full mx-auto px-8 lg:px-16">
+        <div class="flex justify-between">
+          {# Items #}
+          <a href="/" class="flex items-center space-x-4 py-3 px-3 text-gray-700 hover:text-gray-900">
+            Image Logo
+            <span class="font-sans text-lg font-bold">Karate Wado<br/>Uni Münster</span>
+          </a>
+
+          {# Items #}
+          <div class="hidden md:flex items-center space-x-2">
+            <a href="/"                              class="navbar-btn">Home</a>
+            <a href="/"                              class="navbar-btn">Training</a>
+            <a href="/trainer"   class="navbar-btn">Trainer</a>
+            <a href="/"                              class="navbar-btn">Prüfungen</a>
+            <a href="/"                              class="navbar-btn">Lehrgänge</a>
+          </div>
+
+          {# Mobile button #}
+          <div class="md:hidden flex items-center">
+            <button class="mobile-menu-toggler hover:bg-gray-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        {# Mobile menu #}
+        <div class="mobile-menu hidden md:hidden">
+          <a href="/" class="mobile-menu-btn">Home</a>
+          <a href="/" class="mobile-menu-btn">Training</a>
+          <a href="/trainer" class="mobile-menu-btn">Trainer</a>
+          <a href="/" class="mobile-menu-btn">Prüfungen</a>
+          <a href="/" class="mobile-menu-btn">Lehrgänge</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="flex flex-col items-center justify-center">
+      <div class="w-5/6 lg:max-w-screen-lg">
+        {% block body %}
+        {% endblock body %}
+      </div>
+    </main>
+
+    {# footer #}
+
+    <script src="/js/navbar.js"></script>
+  </body>
+
+</html>

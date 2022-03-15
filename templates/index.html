@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+{# Content of the _index.md file #}
+<div class="bg-gray-100 mt-12 rounded-lg">
+  {# maybe image? #}
+
+  {# Header #}
+  <div class="flex justify-between items-center bg-gray-200 rounded-t-lg py-3 px-8">
+    <div class="text-lg font-extrabold">
+      {{ section.title }}
+    </div>
+  </div>
+
+  {# Content#}
+  <div class="markdown p-8 pb-4 text-sm text-justify leading-snug text-gray-900 align-baseline">
+    {{ section.content | safe }}
+  </div>
+</div>
+
+{# Content of the announcements #}
+{% for page in section.pages %}
+<div class="bg-gray-100 mt-12 rounded-lg">
+  {# Header #}
+  <div class="flex justify-between items-center bg-gray-200 rounded-t-lg py-3 px-8">
+    <div class="text-lg font-extrabold">
+      {{ page.title }}
+    </div>
+  </div>
+
+  {# Content#}
+  <div class="markdown p-8 pb-4 text-sm text-justify leading-snug text-gray-900 align-baseline">
+    {{ page.content | safe }}
+  </div>
+
+  {# Footer #}
+  <div class="text-right py-1 px-8 text-xs text-gray-500">
+    {{ page.date | date(format="%d.%m.%Y %H:%M") }}
+  </div>
+</div>
+{% endfor %}
+
+{% endblock body %}
