@@ -1,0 +1,13 @@
+{
+  "name": "karatewadounims",
+  "version": "1.0.0",
+  "scripts": {
+    "style-build": "tailwindcss -i src/css/base.scss -o static/css/main.css --minify",
+    "style-watch": "tailwindcss -i src/css/base.scss -o static/css/main.css --watch",
+    "zola-serve": "touch static/css/main.css; zola serve",
+    "zola-build": "touch static/css/main.css; zola build"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.0.23"
+  }
+}
