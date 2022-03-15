@@ -3,7 +3,7 @@ title = "Klaus Boers"
 weight = 0
 [extra]
 level = "8. Dan"
-img = "trainer/klaus_boers.jpg"
+img = "/img/trainer/klaus_boers.jpg"
 +++
 
 begann 1976 im Hamburger Hochschulsport Karate (Wado-Ryu) zu trainieren. Seine Trainer waren der japanische
