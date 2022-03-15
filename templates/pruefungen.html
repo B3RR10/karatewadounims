@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="bg-white mt-12 rounded-lg">
+
+  {# Header #}
+  <h1 class="text-2xl py-3 px-8 font-extrabold">{{ section.title }}</h1>
+
+  {% if section.extra.active %}
+
+  <div class="mt-12 bg-gray-100 rounded-lg">
+    {# Content#}
+    <div class="p-8 text-justify leading-snug align-baseline">
+      <ul class="list-none">
+        <li><b>Termin:</b> {{ section.extra.exam.date | date(format="%d.%m.%Y") }}</li>
+        <li><b>Uhrzeit:</b> {{ section.extra.exam.date | date(format="%H:%M") }}</li>
+        <li><b>Ort:</b> <a href="{{ section.extra.exam.place_link }}">{{ section.extra.exam.place_name }}</a></li>
+      </ul>
+      <div class="mt-4 text-sm text-gray-900">{{ section.extra.exam.note }}</div>
+    </div>
+  </div>
+
+  {% else %}
+
+  <div class="mt-12 bg-gray-100 rounded-lg">
+    <div class="p-8 text-justify leading-snug align-baseline">
+      Neue Termine sind bald für Sie online.
+    </div>
+  </div>
+  {% endif %}
+</div>
+
+<div class="markdown py-3 px-8 my-8">
+  {{ section.content | safe }}
+</div>
+
+{% endblock body %}
