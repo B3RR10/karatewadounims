@@ -13,4 +13,4 @@ note = "Einige Mitglieder können die Prüfung nicht ablegen, da es irgend ein G
 
 ## Prüfungsprogramm
 
-* [Prüfungsordnung 9.-1. Kyu](/pdf/pruefungen/Wado_Pruefungsprogram.pdf)
+[Prüfungsordnung 9.-1. Kyu](/pdf/pruefungen/Wado_Pruefungsprogram.pdf)
