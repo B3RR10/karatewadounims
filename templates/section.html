@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<div class="bg-white mt-12 rounded-lg">
+  {# Header #}
+  <h1 class="text-2xl py-3 px-8 font-extrabold">{{ section.title }}</h1>
+</div>
+
+<div class="markdown py-3 my-8">
+  {{ section.content | safe }}
+</div>
+
+{% endblock body %}
