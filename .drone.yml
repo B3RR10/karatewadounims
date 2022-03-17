@@ -8,3 +8,10 @@ steps:
     commands:
       - npm install
       - npm run style-build
+  - name: Zola check
+    image: registry.berrio.dev/zola
+    commands:
+      - zola check
+
+image_pull_secrets:
+  - dockerconfig
