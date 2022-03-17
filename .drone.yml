@@ -1,0 +1,9 @@
+kind: pipeline
+type: docker
+name: deploy
+
+steps:
+  - name: Tailwind build
+    image: node:17-alpine
+    commands:
+      - echo test
