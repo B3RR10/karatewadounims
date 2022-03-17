@@ -12,6 +12,10 @@ steps:
     image: registry.berrio.dev/zola
     commands:
       - zola check
+  - name: Zola build
+    image: registry.berrio.dev/zola
+    commands:
+      - zola build
 
 image_pull_secrets:
   - dockerconfig
