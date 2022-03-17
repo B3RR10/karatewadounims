@@ -16,6 +16,18 @@ steps:
     image: registry.berrio.dev/zola
     commands:
       - zola build
+  - name: Deploy
+    image: alpine
+    environment:
+      SSH_HOST:
+        from_secret: ssh_host
+      SSH_USER:
+        from_secret: ssh_user
+      SSHPASS:
+        from_secret: ssh_password
+    commands:
+      - apk add -U sshpass openssh
+      - sshpass -e -v scp -o StrictHostKeyChecking=no -r public/* $SSH_USER@$SSH_HOST:wadoms/
 
 image_pull_secrets:
   - dockerconfig
