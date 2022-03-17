@@ -1,7 +1,11 @@
 +++
-title = "Karate Do Wado Ryu"
+title = "Was ist Karate?"
 sort_by = "date"
 +++
+
+![Karate at sunset](/img/karate-sunset.jpg)
+
+{{ text_small(text="(https://pixabay.com/)") }}
 
 Das japanische Schriftzeichen für Karate steht für leere Hand. Damit wird angedeutet, dass Karate als eine Form der
 Selbstverteidigung entstanden ist, die auf dem Einsatz des unbewaffneten Körpers beruht und aus Ausweich-, Abwehr- und

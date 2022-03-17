@@ -4,21 +4,27 @@ title = "Impresum"
 
 Karate Wado ist ein Sportangebot im Rahmen des Hochschulsports der Universität Münster (hochschulsport@uni-muenster.de)
 
-* Karate Wado im Hochschulsport der Universität Münster
-* c/o Universität Münster
-* Bispinghof 24/25
-* 48143 Münster
-* Tel.: 0049-251-83 21874
-* www.karatewadounims.de
+```
+    Karate Wado im Hochschulsport der Universität Münster
+    c/o Universität Münster
+    Bispinghof 24/25
+    48143 Münster
+    Tel.: 0049-251-83 21874
+    www.karatewadounims.de
+
+```
 
 ### Verantwortlich im Sinne des Presserechts gemäß § 55 Abs. 2 RStV
 
-* Prof. Dr. Klaus Boers
-* Universität Münster
-* Bispinghof 24-25
-* 48143 Münster
-* boers@uni-muenster.de
-* 0049-251-83 21874
+```
+    Prof. Dr. Klaus Boers
+    Universität Münster
+    Bispinghof 24-25
+    48143 Münster
+    boers@uni-muenster.de
+    0049-251-83 21874
+
+```
 
 Für diese Website ist allein Karate Wado im Hochschulsport der Universität Münster verantwortlich. Der Hochschulsport der Universität Münster trägt für diese Website keinerlei Verantwortung.
 
