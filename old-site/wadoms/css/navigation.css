@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+a.navigation{
+	color:#000000;
+	font-size:12pt;
+}
+
+*.navigation{
+	text-align:center;
+	vertical-align:middle;
+	border:0px; 
+	padding:0px; 
+}
+			
+div.navigation {
+	overflow:hidden; 
+	padding:0px 15px;
+	text-align:left;
+}
+
+table.navigation {
+	width:100% !important;
+	height:40px;
+	margin-top:0px;
+	margin-bottom:0px;
+}
+

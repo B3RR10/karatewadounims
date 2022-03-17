@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+div.footer { 
+	width:950px;
+	padding:5px 0px;
+	bottom:10px;
+	margin:20px;	
+	background-image: -moz-linear-gradient(90deg, #6b7bea 0%, #ecedef 100%) !important;
+	background-image: -webkit-gradient(linear, center top , center bottom , color-stop(0, #6b7bea), color-stop(1, #ecedef));
+	background-color:#ecedef;
+}
+
+div.footer table {
+	margin-top:0px;
+	width:100%;
+}
+
+div.footer table tr td{
+	padding:0px 10px;
+	margin:0px;
+	width:20%;
+	text-align:center;
+}
+
+div.footer table tr td a {
+	font-weight:normal;
+	color:#000000;
+}

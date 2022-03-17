@@ -1,0 +1,135 @@
+@charset "utf-8";
+
+body {
+	background-image: url("../img/background/body_structure.png");
+	background-repeat: repeat;
+	background-attachment:scroll;
+	background-position: center top;
+	background-size: auto;
+	background-color:#8e9099;
+	font-size:11pt;
+	font-family:sans-serif,arial,"lucida grande",tahoma,verdana;
+}
+
+figure{
+  margin: 0;
+}
+
+div.center{
+	background-image: url("../img/background/content_structure.png");
+	background-repeat: repeat;
+	background-attachment:scroll;
+	background-position: center top;
+	background-size: auto;
+	width: 990px; 
+	position: relative; 
+	height: 100%;
+	margin: 0pt auto; 
+	background-color: #F0F0F0;
+}
+
+body div div{
+	margin-top:0;
+	padding-top:10px;
+	opacity:1;
+}
+
+/**
+	Ueberschriften
+*/
+h1 {
+	font-size:15pt;
+	font-weight:bold;
+	color:#000000;
+	margin-left:0px;
+	margin-top:10px;
+	text-decoration:none;
+}
+
+h2 {
+	font-size:14pt;
+	font-weight:bold;
+	color:#0030B0;
+	margin:10px 10px;
+	text-decoration:none;
+}
+
+img {
+	text-decoration:none;
+	border-style:none;
+}
+
+/**
+	Tabellen
+*/
+table {
+	margin-top:10px;
+}
+
+th {
+	background-image: -moz-linear-gradient(90deg, #ecedef 0%, #6b7bea 100%) !important;
+	background-image: -webkit-gradient(linear, center top , center bottom , color-stop(0, #ecedef), color-stop(1, #6b7bea));
+	background-color:#ecedef;
+	font-weight:normal;
+	height:25px;
+	font-weight:bold;
+	padding-top:2px;
+	padding-bottom:2px;
+}
+
+td{
+	font-weight:normal;
+	color:#000000;
+	padding:10px;
+	text-align:left;
+	vertical-align:top;
+}
+
+/**
+	Text
+*/
+p {
+	color:#000000;
+	margin-left:10px;
+	line-height:1.4em;
+}
+
+td p{
+	margin-left:0px;
+	margin-top:0px;
+}
+
+a {
+	color:#900;
+	font-weight:bold;
+}
+
+/**
+	Sonstige Elemente
+*/
+
+hr{
+	color:#002244;
+}
+
+*.hr {
+	color:#002244;
+}
+
+*.img {
+	border-style:none;
+}
+
+*.shadow {
+	box-shadow:4px 4px 16px #666;
+	-webkit-box-shadow: 4px 4px 16px #666;
+	-moz-box-shadow: 4px 4px 16px #666;
+	filter: progid:DXImageTransform.Microsoft.Shadow(color='#666666', Direction=145, Strength=8);
+}
+
+*.shadow2 {
+	box-shadow:5px 5px 30px #CCF;
+	-webkit-box-shadow:5px 5px 30px #CCF;
+	-moz-box-shadow:5px 5px 30px #CCF;
+	filter: progid:DXImageTransform.Microsoft.Shadow(color='#CCCCFF', Direction=0, Strength=16);
+}
