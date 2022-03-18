@@ -4,26 +4,38 @@
 
 <div class="bg-white mt-12 rounded-lg">
 
-  {# Header #}
   <h2 class="text-2xl py-3 px-8 font-extrabold">{{ section.title }}</h2>
+
+  {% if section.pages | filter(attribute="extra.active", value=true) %}
+  {% for page in section.pages | filter(attribute="extra.active", value=true) | reverse %}
+
+  {# Header #}
   <div class="py-3 px-8 text-xl mb-4 font-bold">
-    {{ section.extra.semester }}
+    {{ page.title }}
   </div>
 
-  {% if section.extra.training %}
-
-  <div class="md:flex block md:justify-start md:px-8 md:space-x-16">
-  {% for training in section.extra.training %}
-    <div class="flex flex-col items-center space-y-2 mt-4 py-4 px-8 text-center bg-gray-100 space-y-4 rounded-lg min-w-[25%]">
-      <div class="text-xl font-bold mb-2">{{ training.day | upper }}</div>
+  <div class="md:flex block md:justify-start md:px-8 md:space-x-16 mb-12">
+  {% for training in page.extra.trainings %}
+    <div class="flex flex-col items-center space-y-2 mt-4 py-4 px-8 text-center bg-gray-100 space-y-4 rounded-lg md:min-w-[50%] md:max-w-[50%]">
+      <div class="text-xl font-bold mb-1">{{ training.day | upper }}</div>
       <div class="font-bold">{{ training.time }}</div>
-      <a href="{{ training.place_link }}" class="text-sm text-gray-700 underline decoration-slate-800">{{ training.place_name }}</a>
+      <a href="{{ training.place_link }}" class="text-sm text-gray-700 underline decoration-slate-800">
+        {{ training.place_name }}<br/>{{ training.place_address }}
+      </a>
       {% if training.note %}
       <div class="text-xs text-gray-700">{{ training.note | safe }}</div>
       {% endif %}
     </div>
   {% endfor %}
   </div>
+
+  {% if page.content %}
+  <div class="markdown py-3 my-4">
+    {{ page.content | safe }}
+  </div>
+  {% endif %}
+
+  {% endfor %}
 
   {% else %}
 
@@ -36,7 +48,7 @@
 
 </div>
 
-<div class="markdown py-3 my-8">
+<div class="markdown pt-4 pb-3 my-4">
   {{ section.content | safe }}
 </div>
 

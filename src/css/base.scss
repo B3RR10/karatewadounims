@@ -12,6 +12,12 @@
   }
 }
 
+/* Link styling */
+a {
+  @apply underline;
+  @apply text-gray-700;
+}
+
 .markdown {
   @apply font-sans;
 }
@@ -62,12 +68,6 @@
 }
 .markdown del {
   @apply line-through;
-}
-
-/* Link styling */
-.markdown a {
-  @apply underline;
-  @apply text-gray-700;
 }
 
 /* Blockquote styling */

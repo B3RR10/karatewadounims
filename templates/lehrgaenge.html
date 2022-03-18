@@ -7,27 +7,36 @@
   {# Header #}
   <h1 class="text-2xl py-3 px-8 font-extrabold">{{ section.title }}</h1>
 
-  {% if section.extra.events %}
+  {% if section.pages | filter(attribute="extra.active", value=true) %}
+  {% for event in section.pages | filter(attribute="extra.active", value=true) %}
 
-  {% for event in section.extra.events %}
   <div class="mt-12 bg-gray-100 rounded-lg">
     {# Header #}
     <div class="flex justify-between items-center bg-gray-200 rounded-t-lg py-3 px-8">
       <div class="text-lg font-extrabold">
-        {{ event.type }}
+        {{ event.title }}
       </div>
     </div>
     {# Content#}
     <div class="p-8 text-justify leading-snug align-baseline">
       <ul class="list-none">
-        <li><b>Termin:</b> {{ event.date | date(format="%d.%m.%Y") }}</li>
-        <li><b>Uhrzeit:</b> {{ event.time }}</li>
-        <li><b>Trainer:</b> {{ event.trainer }}</li>
-        <li><b>Ort:</b> <a href="{{ event.place_link }} class="text-sm text-gray-700 underline decoration-slate-800"">{{ event.place_name }}</a></li>
+        <li><b>Termin:</b> {{ event.extra.date }}</li>
+        <li><b>Uhrzeit:</b> {{ event.extra.time }}</li>
+        <li><b>Trainer:</b> {{ event.extra.trainer }}</li>
+        <li>
+          <b>Ort:</b>
+          <a href="{{ event.extra.place_link }}" class="text-sm text-gray-700 underline decoration-slate-800"">
+            {{ event.extra.place_name }}
+          </a>
+        </li>
       </ul>
-      <div class="mt-4 text-sm text-gray-900">{{ event.note }}</div>
+      <div class="mt-4 text-sm text-gray-900">{{ event.content | safe }}</div>
 
-      <a href="{{ event.event_link }}" class="mt-4 text-sm text-gray-900">Weitere Information</a>
+      {% if event.extra.event_link %}
+      <a href="{{ event.extra.event_link }}" class="mt-4 text-sm text-gray-900 underline decoration-slate-800">
+        Weitere Information
+      </a>
+      {% endif %}
     </div>
   </div>
   {% endfor %}

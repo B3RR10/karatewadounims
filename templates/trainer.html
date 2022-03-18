@@ -6,8 +6,11 @@
 <h2 class="text-2xl mt-12 py-3 px-8 font-extrabold">{{ section.title }}</h2>
 
 {% for page in section.pages %}
-<div class="flex items-center bg-gray-100 mt-12 rounded-lg">
+<div class="flex-col justify-between md:flex md:flex-row items-center bg-gray-100 mt-12 rounded-lg">
+  <div class="mx-auto flex items-center">
+
   <img src="{{ page.extra.img }}" alt="" class="rounded-lg object-cover h-auto w-60">
+  </div>
 
   <div class="flex flex-col w-full bg-gray-100 py-3 px-8 rounded-lg">
 
