@@ -7,7 +7,7 @@ sort_by = "date"
 
 {{ text_small(text="(https://pixabay.com/)") }}
 
-Das japanische Schriftzeichen für Karate steht für leere Hand. Damit wird angedeutet, dass Karate als eine Form der
+Das japanische Schriftzeichen für Karate 空手 steht für leere Hand. Damit wird angedeutet, dass Karate als eine Form der
 Selbstverteidigung entstanden ist, die auf dem Einsatz des unbewaffneten Körpers beruht und aus Ausweich-, Abwehr- und
 Angriffstechniken besteht. Es werden der ganze Körper und die mentalen Fähigkeiten trainiert. Karate fördert das
 Koordinationsvermögen, die Schnelligkeit und Ausdauer sowie ganz wesentlich: Gelassenheit und Konzentration auf das, was

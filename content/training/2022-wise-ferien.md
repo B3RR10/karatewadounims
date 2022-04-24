@@ -3,7 +3,7 @@ title = "Semesterferien bis 23. April 2022"
 date = 2022-03-18
 
 [extra]
-active = true
+active = false
 
 [[extra.trainings]]
 day = "Samstag"
