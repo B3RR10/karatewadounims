@@ -21,11 +21,13 @@
     <div class="p-8 text-justify leading-snug align-baseline">
       <ul class="list-none">
         <li><b>Termin:</b> {{ event.extra.date }}</li>
-        <li><b>Uhrzeit:</b> {{ event.extra.time }}</li>
+        {% if event.extra.time %}
+          <li><b>Uhrzeit:</b> {{ event.extra.time }}</li>
+        {% endif %}
         <li><b>Trainer:</b> {{ event.extra.trainer }}</li>
         <li>
           <b>Ort:</b>
-          <a href="{{ event.extra.place_link }}" class="text-sm text-gray-700 underline decoration-slate-800"">
+          <a href="{{ event.extra.place_link }}" target="_blank" class="text-sm text-gray-700 underline decoration-slate-800"">
             {{ event.extra.place_name }}
           </a>
         </li>
