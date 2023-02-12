@@ -1,9 +1,9 @@
 +++
-title = "Wintersemester vom 17. Oktober 2022 bis 05. Februar 2023"
-date = 2022-10-17
+title = "Semesterferien bis 6. April 2023"
+date = 2023-02-12
 
 [extra]
-active = false
+active = true
 
 [[extra.trainings]]
 day = "Dienstag"
@@ -16,7 +16,7 @@ note = ""
 [[extra.trainings]]
 day = "Donnerstag"
 time = "20:00 - 21:30"
-place_name = "Fechtraum in der Universitätssporthalle"
+place_name = "Box-Judoraum in der Universitätssporthalle"
 place_address = "Horstmarer Landweg 51, 48149 Münster"
 place_link = "https://www.google.com/maps/dir/?api=1&destination=51.97041,7.59946"
 note = ""
