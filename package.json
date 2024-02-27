@@ -5,7 +5,8 @@
     "style-build": "tailwindcss -i src/css/base.scss -o static/css/main.css --minify",
     "style-watch": "tailwindcss -i src/css/base.scss -o static/css/main.css --watch",
     "zola-serve": "touch static/css/main.css; zola serve",
-    "zola-build": "touch static/css/main.css; zola build"
+    "zola-build": "touch static/css/main.css; zola build",
+    "build": "tailwindcss -i src/css/base.scss -o static/css/main.css --minify && zola build"
   },
   "devDependencies": {
     "tailwindcss": "^3.0.23"
