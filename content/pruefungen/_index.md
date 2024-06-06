@@ -3,12 +3,12 @@ title = "Prüfungen"
 template = "pruefungen.html"
 alias = ["pruefungen"]
 [extra]
-active = false
+active = true
 [extra.exam]
-date = 2022-06-29T10:35:00Z
-place_name = "Somewhere"
-place_link = "maps.google.cco:"
-note = "Einige Mitglieder können die Prüfung nicht ablegen, da es irgend ein Grund dafür gibt..."
+date = 2024-07-09T20:30:00Z
+place_name = "Dojo des Hochschulsportzentrums. Horstmarer Landweg 86b, 48149 Münster"
+place_link = "https://www.google.com/maps/dir/?api=1&destination=51.97246,7.59694"
+note = ""
 +++
 
 ## Prüfungsprogramm
