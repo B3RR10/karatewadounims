@@ -16,7 +16,7 @@
 
   <div class="md:flex block md:justify-start md:px-8 md:space-x-16 mb-12">
   {% for training in page.extra.trainings %}
-    <div class="flex flex-col items-center space-y-2 mt-4 py-4 px-8 text-center bg-gray-100 space-y-4 rounded-lg md:min-w-[50%] md:max-w-[50%]">
+    <div class="flex flex-col items-center mt-4 py-4 px-8 text-center bg-gray-100 space-y-4 rounded-lg md:min-w-[50%] md:max-w-[50%]">
       <div class="text-xl font-bold mb-1">{{ training.day | upper }}</div>
       <div class="font-bold">{{ training.time }}</div>
       <a href="{{ training.place_link }}" class="text-sm text-gray-700 underline decoration-slate-800">

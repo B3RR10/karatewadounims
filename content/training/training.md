@@ -1,6 +1,6 @@
 +++
-title = "Semesterferien bis 6. April 2023"
-date = 2023-02-12
+title = "Sommersemester vom 09. April bis 11. Juli 2024"
+date = 2024-04-09
 
 [extra]
 active = true
