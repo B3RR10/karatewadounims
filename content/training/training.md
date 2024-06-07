@@ -16,7 +16,7 @@ note = ""
 [[extra.trainings]]
 day = "Donnerstag"
 time = "20:00 - 21:30"
-place_name = "Box-Judoraum in der Universitätssporthalle"
+place_name = "Fechtraum in der Universitätssporthalle"
 place_address = "Horstmarer Landweg 51, 48149 Münster"
 place_link = "https://www.google.com/maps/dir/?api=1&destination=51.97041,7.59946"
 note = ""
